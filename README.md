@@ -18,7 +18,7 @@ Host a HTTP service so that only a devices on a certain VLAN can access it
 - Network Webapps for students
 
 #### List of Cisco Firepower APIs Used for policy making
--  skjdas
+- skjdas
 - sakjd 
 
 #### Aspects of SchoolBox
@@ -26,7 +26,6 @@ Host a HTTP service so that only a devices on a certain VLAN can access it
 - VLAN Separation of Teacher and Student Apps
 - User management is centralized and limited by design
 
-architecture:
 ```
 ------------       |-----------------|   tx/rx  ------------------
 | internet |<----->| cisco firepower |<-------->|   CoocaChilli  |
@@ -76,11 +75,8 @@ Once it's authenticated, send radius auth
 - Hostapd and dnsmasq runs in a docker container
 - Freeradius runs in  a docker container
 
+#### Flow
+HTTP services will listen only on the IP of the interface on that vlan
 
-#### Team Members 
-- Hrishikesh Barman
-- Sohini Roy
-- Abhinash Boruah
-- Prasanta Das
-- Monsoon Bhuyan
-- Rishisraj Kashyap
+
+#### Contribute
