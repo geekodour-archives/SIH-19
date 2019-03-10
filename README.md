@@ -76,7 +76,12 @@ Once it's authenticated, send radius auth
 - Freeradius runs in  a docker container
 
 #### Flow
+[chaining eap authentication with webauth](https://security.stackexchange.com/questions/140965/wpa2-eap-and-captive-portal)
+
+This can be achieved with cisco wlc but as I don't have access to one, we will try achieving it with coovachilli
+
 HTTP services will listen only on the IP of the interface on that vlan
+
 
 
 #### Contribute
