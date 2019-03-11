@@ -33,10 +33,11 @@ RUN apt-get purge -y git build-essential libtool autoconf automake gengetopt dev
     rm -rf /var/lib/apt/lists/*
 
 # put right config
-COPY default_chilly /etc/default/chilli
-COPY hs.conf /etc/chilli/
-COPY local.conf /etc/chilli/
-COPY main.conf /etc/chilli/
+COPY chilli.conf /etc/chilli.conf
+COPY config /etc/chilli/config
+COPY hs.conf /etc/chilli/hs.conf
+COPY local.conf /etc/chilli/local.conf
+COPY main.conf /etc/chilli/main.conf
 
 EXPOSE 3990 4990
 

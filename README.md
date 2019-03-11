@@ -79,9 +79,22 @@ Once it's authenticated, send radius auth
 [chaining eap authentication with webauth](https://security.stackexchange.com/questions/140965/wpa2-eap-and-captive-portal)
 
 This can be achieved with cisco wlc but as I don't have access to one, we will try achieving it with coovachilli
+browser-based Universal Access Method (UAM) captive portal.
 
 HTTP services will listen only on the IP of the interface on that vlan
 
+----
+- what is wpa_guests
 
+https://code.google.com/archive/p/fabfi/wikis/IntroductionToRadius.wiki
+
+
+## Bugs
+- Students cannot connect to the network untill and unless the network is connected to the internet, because the local DNS servers are not being used
+    - possible solution can be to configure coovachilli to use something like dnsmasq for dhcp relaying or using a more proper captive portal solution
+
+## Takeaways
+- Setting up coovachilli is a PITA with **BAD** docs.
+    - Use OpenWRT with Packetfence if don't want to spend anything on a proper solution
 
 #### Contribute
