@@ -96,5 +96,28 @@ https://code.google.com/archive/p/fabfi/wikis/IntroductionToRadius.wiki
 ## Takeaways
 - Setting up coovachilli is a PITA with **BAD** docs.
     - Use OpenWRT with Packetfence if don't want to spend anything on a proper solution
+- FreeRadius logging can be improved with coloring
+
+## Freeradius
+There are two general kinds of attributes : Check Attributes and Reply Attributes
+Attribute Value Pairs (AVPs)
+
+How user files work: https://stackoverflow.com/questions/13658080/freeradius-users-operators/17968867#17968867
+
+
+#### Docker magic
+docker pull phpmyadmin/phpmyadmin
+docker network create schoolbox-network
+
+```
+
+docker run --name phpmyadmin-sb \
+           --net=schoolbox-network \
+           -e MYSQL_ROOT_PASSWORD=password \
+           -e PMA_HOST="mysql-sb" \
+           -e PMA_PORT=3306 \
+           -p 8080:80 \
+           -d phpmyadmin/phpmyadmin
+```
 
 #### Contribute
